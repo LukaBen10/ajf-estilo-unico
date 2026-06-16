@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Finalizar compra — AJF Estilo Único</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#16130E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2316130E'/%3E%3Ctext x='50' y='66' font-family='Georgia,serif' font-size='40' fill='%23F3EFE7' text-anchor='middle'%3EAJF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="site-header solid">
+  <div class="announcement">Compra 100% segura · Envíos a todo el país</div>
+  <nav class="nav">
+    <button id="navToggle" class="nav__toggle" aria-label="Abrir menú"><svg class="icon" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    <ul class="nav__links">
+      <li><a href="tienda.html">Tienda</a></li><li><a href="tienda.html?cat=jeans">Jeans</a></li>
+      <li><a href="tienda.html?cat=camperas">Camperas</a></li><li><a href="index.html#nosotros">Nosotros</a></li>
+    </ul>
+    <a href="index.html" class="brand" aria-label="AJF Estilo Único, inicio">AJF</a>
+    <div class="nav__actions">
+      <button aria-label="Buscar"><svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+      <button id="cartOpen" class="cart-btn" aria-label="Carrito"><svg class="icon" viewBox="0 0 24 24"><path d="M6 7h12l-1 14H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><span class="cart-count" id="cartCount" style="visibility:hidden">0</span></button>
+    </div>
+  </nav>
+</header>
+
+<div id="mobileMenu" class="drawer" style="left:0;right:auto;transform:translateX(-100%);width:min(360px,100%);z-index:100">
+  <div class="drawer__head"><span class="brand" style="font-size:1.5rem">AJF</span>
+    <button id="menuClose" aria-label="Cerrar"><svg class="icon" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="drawer__items" style="padding-top:18px">
+    <a href="tienda.html" style="display:block;font-family:var(--font-display);font-size:1.7rem;padding:14px 0;border-bottom:1px solid var(--line)">Tienda</a>
+    <a href="index.html" style="display:block;font-family:var(--font-display);font-size:1.7rem;padding:14px 0;border-bottom:1px solid var(--line)">Inicio</a>
+  </div>
+</div>
+
+<main>
+  <div class="container" style="padding-top:calc(var(--header-h) + 30px)">
+    <p class="breadcrumb"><a href="index.html">Inicio</a> / <a href="tienda.html">Tienda</a> / Finalizar compra</p>
+
+    <div id="checkoutLive">
+      <h1 class="checkout-title">Finalizá tu compra</h1>
+      <div class="checkout">
+        <form class="checkout-form" id="checkoutForm" novalidate>
+          <section class="cform-block">
+            <h3>1 · Contacto</h3>
+            <div class="field"><label for="ck-email">Email</label><input id="ck-email" type="email" placeholder="tu@email.com" required></div>
+            <div class="grid2">
+              <div class="field"><label for="ck-nombre">Nombre</label><input id="ck-nombre" required></div>
+              <div class="field"><label for="ck-apellido">Apellido</label><input id="ck-apellido" required></div>
+            </div>
+            <div class="field"><label for="ck-tel">Teléfono / WhatsApp</label><input id="ck-tel" type="tel" placeholder="11 2345 6789" required></div>
+          </section>
+
+          <section class="cform-block">
+            <h3>2 · Entrega</h3>
+            <div class="opt-cards" id="shipOptions">
+              <label class="opt-card active"><input type="radio" name="ship" value="domicilio" data-cost="4500" checked>
+                <span><span class="oc-title">Envío a domicilio</span><span class="oc-sub">Andreani / Correo Argentino · 2 a 5 días hábiles</span></span><span class="oc-price">$4.500</span></label>
+              <label class="opt-card"><input type="radio" name="ship" value="retiro" data-cost="0">
+                <span><span class="oc-title">Retiro sin cargo</span><span class="oc-sub">Coordinás punto de retiro</span></span><span class="oc-price">Gratis</span></label>
+            </div>
+            <div class="collapsible open" id="shipFields"><div><div class="pad">
+              <div class="field"><label for="ck-dir">Dirección y número</label><input id="ck-dir" placeholder="Av. Siempreviva 742" required></div>
+              <div class="grid2">
+                <div class="field"><label for="ck-loc">Localidad</label><input id="ck-loc" required></div>
+                <div class="field"><label for="ck-prov">Provincia</label>
+                  <select id="ck-prov" required><option value="">Elegí…</option><option>CABA</option><option>Buenos Aires</option><option>Córdoba</option><option>Santa Fe</option><option>Mendoza</option><option>Otra</option></select></div>
+              </div>
+              <div class="grid2">
+                <div class="field"><label for="ck-cp">Código postal</label><input id="ck-cp" required></div>
+                <div class="field"><label for="ck-piso">Piso / depto <span style="color:var(--muted);font-weight:400">(opcional)</span></label><input id="ck-piso"></div>
+              </div>
+            </div></div></div>
+          </section>
+
+          <section class="cform-block">
+            <h3>3 · Pago</h3>
+            <div class="opt-cards" id="payOptions">
+              <label class="opt-card active"><input type="radio" name="pay" value="tarjeta" checked>
+                <span><span class="oc-title">Tarjeta de crédito / débito</span><span class="oc-sub">Visa, Mastercard, Amex · hasta 3 cuotas</span></span></label>
+              <label class="opt-card"><input type="radio" name="pay" value="mercadopago">
+                <span><span class="oc-title">Mercado Pago</span><span class="oc-sub">Dinero en cuenta, tarjetas o efectivo</span></span></label>
+              <label class="opt-card"><input type="radio" name="pay" value="transferencia">
+                <span><span class="oc-title">Transferencia bancaria</span><span class="oc-sub">Te enviamos los datos al confirmar · 5% off</span></span></label>
+            </div>
+            <div class="collapsible open" id="cardFields"><div><div class="pad">
+              <div class="field"><label for="ck-card">Número de tarjeta</label><input id="ck-card" inputmode="numeric" placeholder="0000 0000 0000 0000" maxlength="19"></div>
+              <div class="grid2">
+                <div class="field"><label for="ck-exp">Vencimiento</label><input id="ck-exp" placeholder="MM/AA" maxlength="5"></div>
+                <div class="field"><label for="ck-cvv">CVV</label><input id="ck-cvv" inputmode="numeric" placeholder="123" maxlength="4"></div>
+              </div>
+              <div class="field"><label for="ck-titular">Titular de la tarjeta</label><input id="ck-titular" placeholder="Como figura en la tarjeta"></div>
+            </div></div></div>
+            <p class="demo-note"><svg class="icon" viewBox="0 0 24 24" style="width:16px;stroke:var(--clay)"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+              Demostración: el pago es simulado, no se cobra nada real. En la versión final se integra Mercado Pago y cobra de verdad.</p>
+          </section>
+
+          <button class="btn btn--block" type="submit">Confirmar compra</button>
+        </form>
+
+        <aside class="checkout-summary">
+          <h3>Tu pedido</h3>
+          <div id="checkoutItems"></div>
+          <div class="sum-row"><span>Subtotal</span><span id="ckSub">$0</span></div>
+          <div class="sum-row"><span>Envío</span><span id="ckShip">$4.500</span></div>
+          <div class="sum-total"><span>Total</span><span id="ckTotal">$0</span></div>
+        </aside>
+      </div>
+    </div>
+
+    <div class="checkout-success" id="checkoutSuccess" hidden>
+      <div class="ck-check"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg></div>
+      <h1>¡Gracias por tu compra!</h1>
+      <p>Tu pedido se confirmó con éxito. Te mandamos el detalle por email.</p>
+      <div class="order-id" id="orderId">Pedido #AJF-0000</div>
+      <p style="margin-bottom:26px">Te vamos a contactar para coordinar la entrega.</p>
+      <a href="index.html" class="btn">Volver al inicio</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__bottom" style="border:none;padding-top:0">
+      <span>© <span data-year>2026</span> AJF Estilo Único · Buenos Aires, Argentina</span>
+      <div class="footer__pay"><span>Mercado Pago</span><span>Transferencia</span><span>Efectivo</span></div>
+    </div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="cartDrawer" aria-label="Carrito de compras">
+  <div class="drawer__head"><h3>Tu carrito</h3><button id="cartClose" aria-label="Cerrar"><svg class="icon" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="drawer__items" id="cartItems"></div>
+  <div class="drawer__foot"><div class="drawer__sub"><span>Subtotal</span><span id="cartSubtotal">$0</span></div>
+    <p class="muted">Revisá tu pedido y completá los datos.</p>
+    <a class="btn btn--block" href="checkout.html">Seguir comprando arriba</a></div>
+</aside>
+
+<script src="assets/js/products.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

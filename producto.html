@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Producto — AJF Estilo Único</title>
+<meta name="description" content="Detalle de producto — AJF Estilo Único. Ropa de hombre importada con envíos a todo el país.">
+<meta name="theme-color" content="#16130E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2316130E'/%3E%3Ctext x='50' y='66' font-family='Georgia,serif' font-size='40' fill='%23F3EFE7' text-anchor='middle'%3EAJF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="site-header solid">
+  <div class="announcement">Envíos a todo el país · Atención personalizada por WhatsApp</div>
+  <nav class="nav">
+    <button id="navToggle" class="nav__toggle" aria-label="Abrir menú"><svg class="icon" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    <ul class="nav__links">
+      <li><a href="tienda.html">Tienda</a></li><li><a href="tienda.html?cat=jeans">Jeans</a></li>
+      <li><a href="tienda.html?cat=camperas">Camperas</a></li><li><a href="index.html#lookbook">Looks</a></li>
+      <li><a href="index.html#nosotros">Nosotros</a></li>
+    </ul>
+    <a href="index.html" class="brand" aria-label="AJF Estilo Único, inicio">AJF</a>
+    <div class="nav__actions">
+      <button aria-label="Buscar"><svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+      <button aria-label="Favoritos" class="hide-mobile"><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9A5 5 0 0 1 12 6a5 5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg></button>
+      <button id="cartOpen" class="cart-btn" aria-label="Carrito"><svg class="icon" viewBox="0 0 24 24"><path d="M6 7h12l-1 14H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><span class="cart-count" id="cartCount" style="visibility:hidden">0</span></button>
+    </div>
+  </nav>
+</header>
+
+<div id="mobileMenu" class="drawer" style="left:0;right:auto;transform:translateX(-100%);width:min(360px,100%);z-index:100">
+  <div class="drawer__head"><span class="brand" style="font-size:1.5rem">AJF</span>
+    <button id="menuClose" aria-label="Cerrar"><svg class="icon" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="drawer__items" style="padding-top:18px">
+    <a href="tienda.html" style="display:block;font-family:var(--font-display);font-size:1.7rem;padding:14px 0;border-bottom:1px solid var(--line)">Tienda</a>
+    <a href="tienda.html?cat=jeans" style="display:block;font-family:var(--font-display);font-size:1.7rem;padding:14px 0;border-bottom:1px solid var(--line)">Jeans</a>
+    <a href="tienda.html?cat=camperas" style="display:block;font-family:var(--font-display);font-size:1.7rem;padding:14px 0;border-bottom:1px solid var(--line)">Camperas</a>
+    <a href="index.html#nosotros" style="display:block;font-family:var(--font-display);font-size:1.7rem;padding:14px 0;border-bottom:1px solid var(--line)">Nosotros</a>
+  </div>
+</div>
+
+<main>
+  <div class="container" id="pdpRoot"><!-- render desde products.js / main.js --></div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <div class="brand">AJF<span style="color:var(--clay)">.</span> Estilo Único</div>
+        <p class="footer__about">Ropa de hombre importada con onda. Camisas, jeans, camperas y más — atención de persona a persona.</p>
+        <div class="footer__social">
+          <a href="https://instagram.com/ajestilounico1" aria-label="Instagram" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a data-wa="Hola AJF! 👋" aria-label="WhatsApp" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"/></svg></a>
+        </div>
+      </div>
+      <div><h5>Tienda</h5><ul><li><a href="tienda.html">Todo</a></li><li><a href="tienda.html?cat=jeans">Jeans</a></li><li><a href="tienda.html?cat=camperas">Camperas</a></li><li><a href="tienda.html?cat=remeras">Remeras</a></li></ul></div>
+      <div><h5>Ayuda</h5><ul><li><a data-wa="Hola AJF! Consulta sobre envíos" target="_blank" rel="noopener">Envíos</a></li><li><a data-wa="Hola AJF! Consulta sobre cambios" target="_blank" rel="noopener">Cambios</a></li><li><a href="#">Guía de talles</a></li></ul></div>
+      <div><h5>Legal</h5><ul><li><a href="#">Términos y condiciones</a></li><li><a href="#">Política de privacidad</a></li><li><a href="#">Botón de arrepentimiento</a></li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> AJF Estilo Único · Buenos Aires, Argentina</span>
+      <div class="footer__pay"><span>Mercado Pago</span><span>Transferencia</span><span>Efectivo</span></div>
+    </div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="cartDrawer" aria-label="Carrito de compras">
+  <div class="drawer__head"><h3>Tu carrito</h3><button id="cartClose" aria-label="Cerrar"><svg class="icon" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="drawer__items" id="cartItems"></div>
+  <div class="drawer__foot"><div class="drawer__sub"><span>Subtotal</span><span id="cartSubtotal">$0</span></div>
+    <p class="muted">Pagás de forma segura en la web.</p>
+    <a class="btn btn--block" href="checkout.html">Finalizar compra</a></div>
+</aside>
+
+<a class="wa" data-wa="Hola AJF! Te escribo desde la web 👋" aria-label="Escribinos por WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.3.6 4.4 1.7 6.3L3 29l7.4-2.1c1.8 1 3.9 1.5 6 1.5 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.4 1.2 1.2-4.3-.3-.4a10 10 0 0 1-1.6-5.5C5.2 9.6 10 5 16 5s10.8 4.6 10.8 10.5S22 25.7 16 25.7zm5.9-7.8c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.3-.7.1c-1.9-.9-3.1-1.7-4.4-3.9-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6s-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-1.2 1.2-1.1 2.9-.2 4.4 1.7 2.8 3.6 4.6 6.7 5.8 2.4.9 2.9.8 3.5.7.8-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg></a>
+
+<script src="assets/js/products.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
