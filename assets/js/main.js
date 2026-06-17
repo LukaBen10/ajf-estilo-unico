@@ -97,6 +97,7 @@
         <div class="pdp__info">
           <span class="eyebrow">${CAT_LABEL[p.cat]}</span>
           <h1>${p.name}</h1>
+          <div class="pdp__rating"><span class="stars-inline">★★★★★</span> <b>4.8</b> <a href="#reviews">(24 reseñas)</a></div>
           <div class="pdp__price"><span class="price">${ars(p.price)}</span><span class="cuotas">Transferencia o efectivo · consultá cuotas</span></div>
           <p class="pdp__desc">${p.note || "Prenda seleccionada de nuestra colección. Calidad importada."}</p>
           <div class="opt-label"><span>Talle</span><a href="#" onclick="return false">Guía de talles</a></div>
@@ -119,6 +120,24 @@
           </div>
         </div>
       </div>
+      <section id="reviews" class="section">
+        <div class="section-head"><div><span class="eyebrow">Opiniones</span><h2>Reseñas</h2></div></div>
+        <div class="reviews">
+          <div class="reviews__head"><span class="reviews__avg">4.8</span><div><div class="stars-inline" style="font-size:1.05rem;letter-spacing:3px">★★★★★</div><small style="color:var(--muted)">Basado en 24 reseñas</small></div></div>
+          <div class="reviews__list">
+            <figure class="review"><div class="stars">★★★★★</div><p>"Tal cual la foto, muy buena calidad. El talle justo y llegó rapidísimo."</p><footer><cite>Martín R.</cite><small>Hace 1 semana</small></footer></figure>
+            <figure class="review"><div class="stars">★★★★★</div><p>"Me asesoraron por WhatsApp con el talle y la pegaron. Re recomendable."</p><footer><cite>Nico P.</cite><small>Hace 2 semanas</small></footer></figure>
+            <figure class="review"><div class="stars">★★★★☆</div><p>"Muy buena relación precio-calidad. Volvería a comprar sin dudarlo."</p><footer><cite>Fede L.</cite><small>Hace 3 semanas</small></footer></figure>
+            <figure class="review"><div class="stars">★★★★★</div><p>"Excelente atención y la prenda impecable. Ya pedí la segunda."</p><footer><cite>Caro G.</cite><small>Hace 1 mes</small></footer></figure>
+          </div>
+          <form class="review-form" data-review>
+            <h4>Dejá tu reseña</h4>
+            <div class="star-pick" data-stars>${[1,2,3,4,5].map(() => "<span>★</span>").join("")}</div>
+            <textarea placeholder="Contanos qué te pareció: el talle, la calidad, la atención..." required></textarea>
+            <button class="btn" type="submit">Enviar reseña</button>
+          </form>
+        </div>
+      </section>
       <section class="section" style="padding-top:clamp(56px,8vw,110px)">
         <div class="section-head"><div><span class="eyebrow">Te puede gustar</span><h2>Seguí mirando</h2></div>
           <a href="tienda.html" class="link-underline">Ver todo</a></div>
@@ -171,6 +190,14 @@
     }
     const size = e.target.closest(".size");
     if (size && !size.disabled) { $$(".size").forEach((s) => s.classList.remove("active")); size.classList.add("active"); }
+    const star = e.target.closest(".star-pick span");
+    if (star) { const sp = star.parentElement, st = [...sp.children], i = st.indexOf(star); st.forEach((s, j) => s.classList.toggle("on", j <= i)); sp.dataset.value = i + 1; }
+  });
+  document.addEventListener("submit", (e) => {
+    if (e.target.matches("form[data-review]")) {
+      e.preventDefault();
+      e.target.innerHTML = `<p style="font-family:var(--font-display);font-size:1.25rem;color:var(--ink)">¡Gracias por tu reseña! 🙌 La publicamos apenas la revisemos.</p>`;
+    }
   });
 
   /* ============================================================

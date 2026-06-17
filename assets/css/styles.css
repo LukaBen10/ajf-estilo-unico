@@ -380,6 +380,34 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.04;let
   .grid2{grid-template-columns:1fr}
 }
 
+/* ---------- Rating + Reseñas ---------- */
+.pdp__rating{display:flex;align-items:center;gap:8px;margin:-6px 0 14px;font-size:.92rem}
+.stars-inline{color:var(--clay);letter-spacing:2px}
+.pdp__rating a{color:var(--ink-soft);text-decoration:underline}
+.reviews__head{display:flex;align-items:center;gap:14px;margin-bottom:24px}
+.reviews__avg{font-family:var(--font-display);font-size:2.6rem;font-weight:500;line-height:1}
+.reviews__list{display:grid;gap:16px;grid-template-columns:repeat(2,1fr)}
+.review{border:1px solid var(--line);border-radius:var(--r-lg);padding:20px;background:var(--paper)}
+.review .stars{color:var(--clay);letter-spacing:2px;font-size:.85rem}
+.review p{margin:8px 0 12px;font-size:.95rem;color:var(--ink-soft);font-style:italic}
+.review footer{display:flex;justify-content:space-between;align-items:center}
+.review cite{font-style:normal;font-weight:600;font-size:.9rem}
+.review small{color:var(--muted);font-size:.8rem}
+.review-form{margin-top:18px;border:1px dashed var(--line);border-radius:var(--r-lg);padding:22px;background:var(--bone)}
+.review-form h4{font-family:var(--font-body);font-weight:700;font-size:.95rem;margin-bottom:12px}
+.star-pick{display:flex;gap:4px;font-size:1.6rem;color:var(--line);margin-bottom:12px;width:max-content;cursor:pointer}
+.star-pick span{transition:color .15s}
+.star-pick span.on{color:var(--clay)}
+.review-form textarea{width:100%;border:1px solid var(--line);border-radius:var(--r);padding:.85em 1em;font-family:inherit;font-size:.95rem;background:var(--paper);resize:vertical;min-height:84px}
+.review-form textarea:focus{outline:none;border-color:var(--ink)}
+.review-form .btn{margin-top:12px}
+
+/* ---------- CTA "algo especial" ---------- */
+.special-cta{display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;background:var(--denim);color:var(--bone);border-radius:var(--r-lg);padding:clamp(28px,4vw,46px)}
+.special-cta h3{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:500}
+.special-cta p{color:#cdd6e6;margin-top:8px;max-width:48ch}
+@media(max-width:768px){.reviews__list{grid-template-columns:1fr}}
+
 /* ---------- Utils ---------- */
 .mt-0{margin-top:0}.hide-mobile{}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
