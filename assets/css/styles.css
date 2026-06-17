@@ -83,6 +83,9 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.04;let
 .nav__links a::after{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:100%;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
 .nav__links a:hover::after,.nav__links a[aria-current="page"]::after{transform:scaleX(1)}
 .brand{font-family:var(--font-display);font-size:1.5rem;font-weight:600;letter-spacing:.02em;display:flex;align-items:center;gap:.5ch;white-space:nowrap}
+.brand-logo{height:42px;width:auto;display:block}
+.brand-logo--sm{height:38px}
+.brand-logo--footer{height:60px}
 .brand sup{font-size:.6em;color:var(--clay)}
 .nav__actions button{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;transition:background .3s}
 .nav__actions button:hover{background:rgba(0,0,0,.07)}
